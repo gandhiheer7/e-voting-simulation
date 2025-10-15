@@ -1,0 +1,41 @@
+body { 
+    font-family: 'Inter', sans-serif; 
+    background-color: #111827; 
+}
+
+.card { 
+    background-color: #1f2937; 
+    border: 1px solid #374151; 
+}
+
+.btn-primary { 
+    background-color: #3b82f6; 
+    transition: background-color 0.3s; 
+}
+
+.btn-primary:hover { 
+    background-color: #2563eb; 
+}
+
+.btn-danger { 
+    background-color: #ef4444; 
+    transition: background-color 0.3s; 
+}
+
+.btn-danger:hover { 
+    background-color: #dc2626; 
+}
+
+.log-panel { 
+    background-color: #000; 
+    border: 1px solid #374151; 
+    height: 400px; 
+    overflow-y: scroll; 
+    font-family: 'Courier New', monospace; 
+    font-size: 0.875rem; 
+}
+
+.log-line { 
+    padding: 4px 8px; 
+    border-bottom: 1px solid #2a3341; 
+}

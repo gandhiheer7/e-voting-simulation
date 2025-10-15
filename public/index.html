@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Distributed System Simulation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-gray-300 p-8">
+    <div class="max-w-7xl mx-auto">
+        <header class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-white">Distributed E-Voting System Simulation</h1>
+            <p class="text-gray-400 mt-2">Running live on Vercel with a simulated backend.</p>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="space-y-8">
+                <div class="card p-6 rounded-lg">
+                    <h2 class="text-2xl font-semibold text-white mb-4">Admin Controls</h2>
+                    <div class="flex space-x-2 mb-4">
+                        <input type="text" id="candidate-name" class="bg-gray-700 border border-gray-600 text-white rounded-lg w-full p-2.5" placeholder="New Candidate Name">
+                        <button onclick="addCandidate()" class="btn-primary text-white font-medium rounded-lg px-5">Add</button>
+                    </div>
+                    <button onclick="initializeSystem()" class="w-full bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg px-5 py-2.5">
+                        Initialize / Reset System
+                    </button>
+                </div>
+
+                <div class="card p-6 rounded-lg">
+                    <h2 class="text-2xl font-semibold text-white mb-4">Voter Portal</h2>
+                     <div class="mb-4">
+                        <label for="voter-id" class="block mb-2 text-sm font-medium">Voter ID</label>
+                        <input type="text" id="voter-id" class="bg-gray-700 border border-gray-600 text-white rounded-lg w-full p-2.5" placeholder="Enter a unique ID">
+                    </div>
+                    <div id="candidate-list" class="space-y-2"></div>
+                </div>
+            </div>
+
+            <div class="space-y-8">
+                <div class="card p-6 rounded-lg">
+                    <h2 class="text-2xl font-semibold text-white mb-4">System Status & Results</h2>
+                    <div id="status-container" class="space-y-4"></div>
+                </div>
+                <div class="card p-6 rounded-lg">
+                    <h2 class="text-2xl font-semibold text-white mb-4">Live System Log</h2>
+                    <div id="log-panel" class="log-panel rounded-md"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
